@@ -1,0 +1,2 @@
+import {SCHEMA} from './model.mjs';
+export const example=()=>({schema:SCHEMA,title:'Documentation network review',labelA:'Before',labelB:'After',listA:'# Synthetic documentation addresses only\n192.0.2.7/24 # host bits intentionally normalize\n192.0.2.0/25 # contained within first entry\n198.51.100.4\n198.51.100.4 # duplicate',listB:'192.0.2.0/25\n192.0.2.128/26\n203.0.113.0/30',notes:'Invented inputs for address-set arithmetic. No routing, host reachability or access policy is inferred.'});
