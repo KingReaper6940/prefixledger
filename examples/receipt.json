@@ -1,0 +1,302 @@
+{
+  "schema": "prefixledger-report-v1",
+  "project": {
+    "schema": "prefixledger-project-v1",
+    "title": "Documentation network review",
+    "labelA": "Before",
+    "labelB": "After",
+    "listA": "# Synthetic documentation addresses only\n192.0.2.7/24 # host bits intentionally normalize\n192.0.2.0/25 # contained within first entry\n198.51.100.4\n198.51.100.4 # duplicate",
+    "listB": "192.0.2.0/25\n192.0.2.128/26\n203.0.113.0/30",
+    "notes": "Invented inputs for address-set arithmetic. No routing, host reachability or access policy is inferred."
+  },
+  "scope": "IPv4 address-set arithmetic only. Counts include every address, not usable-host estimates or routing/access behavior.",
+  "counts": {
+    "onlyA": 65,
+    "both": 192,
+    "onlyB": 4,
+    "union": 261,
+    "a": 257,
+    "b": 196
+  },
+  "ranges": {
+    "onlyA": [
+      [
+        3221226176,
+        3221226240
+      ],
+      [
+        3325256708,
+        3325256709
+      ]
+    ],
+    "both": [
+      [
+        3221225984,
+        3221226176
+      ]
+    ],
+    "onlyB": [
+      [
+        3405803776,
+        3405803780
+      ]
+    ],
+    "union": [
+      [
+        3221225984,
+        3221226240
+      ],
+      [
+        3325256708,
+        3325256709
+      ],
+      [
+        3405803776,
+        3405803780
+      ]
+    ],
+    "a": [
+      [
+        3221225984,
+        3221226240
+      ],
+      [
+        3325256708,
+        3325256709
+      ]
+    ],
+    "b": [
+      [
+        3221225984,
+        3221226176
+      ],
+      [
+        3405803776,
+        3405803780
+      ]
+    ]
+  },
+  "cidrs": {
+    "onlyA": [
+      "192.0.2.192/26",
+      "198.51.100.4/32"
+    ],
+    "both": [
+      "192.0.2.0/25",
+      "192.0.2.128/26"
+    ],
+    "onlyB": [
+      "203.0.113.0/30"
+    ],
+    "union": [
+      "192.0.2.0/24",
+      "198.51.100.4/32",
+      "203.0.113.0/30"
+    ],
+    "a": [
+      "192.0.2.0/24",
+      "198.51.100.4/32"
+    ],
+    "b": [
+      "192.0.2.0/25",
+      "192.0.2.128/26",
+      "203.0.113.0/30"
+    ]
+  },
+  "entriesA": [
+    {
+      "id": "a2",
+      "line": 2,
+      "token": "192.0.2.7/24",
+      "comment": "host bits intentionally normalize",
+      "address": 3221225991,
+      "prefix": 24,
+      "start": 3221225984,
+      "end": 3221226240,
+      "count": 256,
+      "canonical": "192.0.2.0/24",
+      "normalized": true,
+      "bare": false,
+      "duplicateOf": null,
+      "containedBy": []
+    },
+    {
+      "id": "a3",
+      "line": 3,
+      "token": "192.0.2.0/25",
+      "comment": "contained within first entry",
+      "address": 3221225984,
+      "prefix": 25,
+      "start": 3221225984,
+      "end": 3221226112,
+      "count": 128,
+      "canonical": "192.0.2.0/25",
+      "normalized": false,
+      "bare": false,
+      "duplicateOf": null,
+      "containedBy": [
+        "a2"
+      ]
+    },
+    {
+      "id": "a4",
+      "line": 4,
+      "token": "198.51.100.4",
+      "comment": "",
+      "address": 3325256708,
+      "prefix": 32,
+      "start": 3325256708,
+      "end": 3325256709,
+      "count": 1,
+      "canonical": "198.51.100.4/32",
+      "normalized": false,
+      "bare": true,
+      "duplicateOf": null,
+      "containedBy": []
+    },
+    {
+      "id": "a5",
+      "line": 5,
+      "token": "198.51.100.4",
+      "comment": "duplicate",
+      "address": 3325256708,
+      "prefix": 32,
+      "start": 3325256708,
+      "end": 3325256709,
+      "count": 1,
+      "canonical": "198.51.100.4/32",
+      "normalized": false,
+      "bare": true,
+      "duplicateOf": "a4",
+      "containedBy": []
+    }
+  ],
+  "entriesB": [
+    {
+      "id": "b1",
+      "line": 1,
+      "token": "192.0.2.0/25",
+      "comment": "",
+      "address": 3221225984,
+      "prefix": 25,
+      "start": 3221225984,
+      "end": 3221226112,
+      "count": 128,
+      "canonical": "192.0.2.0/25",
+      "normalized": false,
+      "bare": false,
+      "duplicateOf": null,
+      "containedBy": []
+    },
+    {
+      "id": "b2",
+      "line": 2,
+      "token": "192.0.2.128/26",
+      "comment": "",
+      "address": 3221226112,
+      "prefix": 26,
+      "start": 3221226112,
+      "end": 3221226176,
+      "count": 64,
+      "canonical": "192.0.2.128/26",
+      "normalized": false,
+      "bare": false,
+      "duplicateOf": null,
+      "containedBy": []
+    },
+    {
+      "id": "b3",
+      "line": 3,
+      "token": "203.0.113.0/30",
+      "comment": "",
+      "address": 3405803776,
+      "prefix": 30,
+      "start": 3405803776,
+      "end": 3405803780,
+      "count": 4,
+      "canonical": "203.0.113.0/30",
+      "normalized": false,
+      "bare": false,
+      "duplicateOf": null,
+      "containedBy": []
+    }
+  ],
+  "duplicateGroupsA": [
+    {
+      "canonical": "198.51.100.4/32",
+      "ids": [
+        "a4",
+        "a5"
+      ]
+    }
+  ],
+  "duplicateGroupsB": [],
+  "segments": [
+    {
+      "start": 3221225984,
+      "end": 3221226112,
+      "count": 128,
+      "first": "192.0.2.0",
+      "last": "192.0.2.127",
+      "category": "both",
+      "sourceA": [
+        "a2",
+        "a3"
+      ],
+      "sourceB": [
+        "b1"
+      ]
+    },
+    {
+      "start": 3221226112,
+      "end": 3221226176,
+      "count": 64,
+      "first": "192.0.2.128",
+      "last": "192.0.2.191",
+      "category": "both",
+      "sourceA": [
+        "a2"
+      ],
+      "sourceB": [
+        "b2"
+      ]
+    },
+    {
+      "start": 3221226176,
+      "end": 3221226240,
+      "count": 64,
+      "first": "192.0.2.192",
+      "last": "192.0.2.255",
+      "category": "onlyA",
+      "sourceA": [
+        "a2"
+      ],
+      "sourceB": []
+    },
+    {
+      "start": 3325256708,
+      "end": 3325256709,
+      "count": 1,
+      "first": "198.51.100.4",
+      "last": "198.51.100.4",
+      "category": "onlyA",
+      "sourceA": [
+        "a4",
+        "a5"
+      ],
+      "sourceB": []
+    },
+    {
+      "start": 3405803776,
+      "end": 3405803780,
+      "count": 4,
+      "first": "203.0.113.0",
+      "last": "203.0.113.3",
+      "category": "onlyB",
+      "sourceA": [],
+      "sourceB": [
+        "b3"
+      ]
+    }
+  ]
+}
