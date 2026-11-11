@@ -2,6 +2,8 @@
 
 Compare two IPv4 lists by **address coverage**, with exact differences, minimal CIDR covers and a receipt linking every covered segment to its original input lines.
 
+**[Open Prefixledger](https://prefixledger.vercel.app)** · [Automated checks](https://github.com/KingReaper6940/prefixledger/actions/workflows/checks.yml)
+
 A `/24` and two adjacent `/25` entries cover the same addresses. Prefixledger recognizes that equivalence instead of comparing the lines as strings.
 
 ![Generated coverage summary for the included example](examples/summary.svg)
